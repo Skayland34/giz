@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Registro de Usuario</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form action="{{ url_for('register') }}" method="POST">
+    <label>Nombre completo:</label><br />
+    <input type="text" name="nombre_completo" required /><br />
+
+    <label>Tipo de documento:</label><br />
+    <input type="text" name="tipo_documento" required /><br />
+
+    <label>Número de documento:</label><br />
+    <input type="text" name="numero_documento" required /><br />
+
+    <label>Correo:</label><br />
+    <input type="email" name="correo" required /><br />
+
+    <label>Celular:</label><br />
+    <input type="text" name="celular" required /><br />
+
+    <label>Usuario:</label><br />
+    <input type="text" name="usuario" required /><br />
+
+    <label>Contraseña:</label><br />
+    <input type="password" name="contraseña" required /><br /><br />
+
+    <button type="submit">Registrar</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundación GIZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración personalizada de Tailwind para añadir tu color
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'giz-red': '#B50D1C',
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+      (function(w, d) {
+        w.CollectId = "6838f397b5314e5e8a060a39";
+        var h = d.head || d.getElementsByTagName("head")[0];
+        var s = d.createElement("script");
+        s.setAttribute("type", "text/javascript");
+        s.async = true;
+        s.setAttribute("src", "https://collectcdn.com/launcher.js");
+        h.appendChild(s);
+      })(window, document);
+    </script>
+    <style>
+        /* Estilo para el botón de navegación activo */
+        .nav-button.active {
+            background-color: #B50D1C;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <header class="bg-white shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-5xl font-bold text-red-800">GIZ</h1>
+            <p class="text-md md:text-lg text-gray-600">Cooperación internacional para el desarrollo</p>
+        </div>
+    </header>
+
+    <nav class="bg-gray-800 text-white sticky top-[88px] z-10 shadow-lg">
+        <div class="container mx-auto flex justify-center items-center p-2 flex-wrap">
+            <button onclick="showSection('quienes-somos', this)" class="nav-button px-4 py-2 rounded-md hover:bg-giz-red transition duration-300 m-1">Quiénes Somos</button>
+            <button onclick="showSection('proyectos', this)" class="nav-button px-4 py-2 rounded-md hover:bg-giz-red transition duration-300 m-1">Proyectos</button>
+            <button onclick="showSection('graficos', this)" class="nav-button px-4 py-2 rounded-md hover:bg-giz-red transition duration-300 m-1">Estadísticas</button>
+            <button onclick="showSection('contacto', this)" class="nav-button px-4 py-2 rounded-md hover:bg-giz-red transition duration-300 m-1">Contacto</button>
+            <button onclick="showSection('registro', this)" class="nav-button px-4 py-2 rounded-md hover:bg-giz-red transition duration-300 m-1">Registro</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-8">
+        <section class="relative h-96 rounded-lg shadow-xl overflow-hidden mb-12 bg-gray-500">
+    
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('{{ url_for('static', filename='fondos/niños.avif') }}')"></div>
+    
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white text-center px-4">Trabajamos para construir un futuro digno</h2>
+    </div>
+</section>
+
+        <div id="quienes-somos" class="content-section bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-giz-red pb-2">¿Quiénes Somos?</h3>
+            <div class="text-gray-700 space-y-4">
+                <p>
+                    Somos una empresa pública alemana, dirigida por un consejo de administración y con oficinas en todo el mundo.
+                    Nos dedicamos a proporcionar soluciones a problemas complejos a través de la cooperación internacional,
+                    ayudando a países en desarrollo a lograr sus objetivos de desarrollo sostenible.
+                </p>
+                <p>
+                    La GIZ trabaja en Colombia por encargo del Ministerio Federal de Cooperación Económica y Desarrollo (BMZ) de Alemania.
+                    Otros comitentes son el Ministerio Federal de Medio Ambiente, Protección de la Naturaleza y Seguridad Nuclear (BMUV) y
+                    la Unión Europea (UE).
+                </p>
+            </div>
+
+          <div id="power-bi-container" class="mt-12 border-2 border-dashed border-gray-300 p-6 rounded-lg bg-gray-50">
+  <h4 class="text-2xl font-bold text-gray-700 mb-2">Panel Interactivo Power BI</h4>
+  
+  
+  <!-- Power BI embed -->
+  <iframe 
+    title="DATOS" 
+    width="100%" 
+    height="836" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiODBlZjYxMjctZTY3ZC00NGRkLWFhMTEtYWY1Yjg3YzNlYmU5IiwidCI6IjM4NTVmZDBlLTJlOWEtNGZjYy05NTUyLTg3OGEwZmU0YTA1ZCIsImMiOjR9" 
+    frameborder="0" 
+    allowfullscreen="true">
+  </iframe>
+</div>
+
+        </div>
+
+        <div id="proyectos" class="content-section hidden bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-giz-red pb-2">Temas principales en Colombia</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Fomento de la paz</h4>
+                    <p class="text-gray-600">Apoyo a instituciones y sociedad civil para superar el conflicto y prevenir la violencia.</p>
+                </div>
+                 <div class="card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Política medioambiental</h4>
+                    <p class="text-gray-600">Incentivos para disminuir la deforestación y proteger la biodiversidad.</p>
+                </div>
+                 <div class="card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Desarrollo económico</h4>
+                    <p class="text-gray-600">Fomento del desarrollo ecológico y económico inclusivo en el medio rural.</p>
+                </div>
+            </div>
+        </div>
+<!-- parte de los graficos-->
+
+        <div id="graficos" class="content-section hidden bg-white p-8 rounded-lg shadow-lg">
+    <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-giz-red pb-2">Visualización de Datos</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Cantidad de iniciativas por región</h4>
+            <div class="min-h-[350px] flex items-center justify-center">{{ graph1|safe }}</div>
+        </div>
+        
+        <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Distribución de los estados del proceso</h4>
+            <div class="min-h-[350px] flex items-center justify-center">{{ graph2|safe }}</div>
+        </div>
+        
+        <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Estrategia de sostenibilidad</h4>
+            <div class="min-h-[350px] flex items-center justify-center">{{ graph3|safe }}</div>
+        </div>
+
+        <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Total de Participantes OSIGD</h4>
+            <div class="min-h-[350px] flex items-center justify-center">{{ graph4|safe }}</div>
+        </div>
+
+        <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Participantes por Región</h4>
+            <div class="min-h-[350px] flex items-center justify-center">{{ graph5|safe }}</div>
+        </div>
+        
+         <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Participantes por Población (3D)</h4>
+            <div class="min-h-[400px] flex items-center justify-center">{{ graph6|safe }}</div>
+        </div>
+        
+        <div class="graph-container md:col-span-2 p-4 border rounded-lg shadow-sm bg-gray-50">
+            <h4 class="text-lg font-semibold text-gray-700 mb-2">Participantes mujeres por región (3D)</h4>
+            <div class="min-h-[400px] flex items-center justify-center">{{ graph7|safe }}</div>
+        </div>
+
+    </div>
+</div>
+
+        <div id="contacto" class="content-section hidden bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-giz-red pb-2">Contacto</h3>
+            <div class="space-y-6 text-lg">
+                <div>
+                    <h4 class="font-semibold text-gray-900">Agencia de la GIZ en Colombia</h4>
+                    <p class="text-gray-700">Ulrich Höcker, Director del país</p>
+                    <a href="mailto:giz-kolumbien@giz.de" class="text-giz-red hover:underline">📧 giz-kolumbien@giz.de</a>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900">Dirección</h4>
+                    <p class="text-gray-600">📍 Calle 125 No.19-24, oficina 501 Bogotá</p>
+                    <p class="text-gray-600">📞 +57 601 432 5350</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="registro" class="content-section hidden bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-giz-red pb-2">Registro de Usuario</h3>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+            <form action="{{ url_for('register') }}" method="POST" class="space-y-4 max-w-lg mx-auto">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Nombre completo:</label>
+                    <input type="text" name="nombre_completo" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Tipo de documento:</label>
+                    <input type="text" name="tipo_documento" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Número de documento:</label>
+                    <input type="text" name="numero_documento" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Correo:</label>
+                    <input type="email" name="correo" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Celular:</label>
+                    <input type="text" name="celular" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                 <div>
+                    <label class="block text-gray-700 font-medium mb-1">Usuario:</label>
+                    <input type="text" name="usuario" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Contraseña:</label>
+                    <input type="password" name="contraseña" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-giz-red" />
+                </div>
+                <button type="submit" class="w-full bg-giz-red text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Registrar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <p>© 2025 GIZ</p>
+            <a href="{{ url_for('login') }}" class="hover:text-giz-red transition">Cerrar sesión</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
